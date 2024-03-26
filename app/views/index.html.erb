@@ -1,0 +1,18 @@
+<div class="container">
+  <h2 class="text-center mt-4">Products Lists</h2>
+  <div class="row products">
+    <% @product.each do |p| %>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><%= p.name %></h5>
+            <p class="card-text"><%= p.description %></p>
+            <p class="card-text">$<%= p.price %></p>
+            <a href="#" class="btn btn-success">Buy</a>
+            <%= link_to 'View', product_url(id: p.id), class: "btn btn-primary float-end" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

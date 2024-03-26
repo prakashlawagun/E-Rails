@@ -4,6 +4,11 @@
     <% @product.each do |p| %>
       <div class="col-md-4">
         <div class="card mb-3">
+          <% if p.image.attached? %>
+            <%= image_tag url_for(p.image), class:"card-img-top", style: "max-width: 500px; max-height: 500px;" %>
+          <% else %>
+            <p>No image available</p>
+          <% end %>
           <div class="card-body">
             <h5 class="card-title"><%= p.name %></h5>
             <p class="card-text"><%= p.description %></p>

@@ -30,6 +30,14 @@
           </div>
         </div>
 
+        <div class="mb-3">
+          <%= f.label :image, class: "form-label" %>
+          <%= f.file_field :image, class: "form-control", required: true %>
+          <div class="invalid-feedback">
+            Please provide a valid price.
+          </div>
+        </div>
+
         <%= f.submit "Create Product", class: "btn btn-primary" %>
       </div>
     </div>

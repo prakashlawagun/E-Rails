@@ -3,6 +3,11 @@
   <div class="row products">
     <div class="col-md-8 mx-auto">
       <div class="card shadow mb-4">
+        <% if @product.image.attached? %>
+          <%= image_tag url_for(@product.image), class:"card-img-top",style: "max-width: 900px; max-height: 500px;" %>
+        <% else %>
+          <p>No image available</p>
+        <% end %>
         <div class="card-body">
           <h3 class="card-title mb-3"><%= @product.name %></h3>
           <p class="card-text mb-4"><%= @product.description %></p>

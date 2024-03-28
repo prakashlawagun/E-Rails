@@ -20,9 +20,9 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to "/", notice: "Product was successfully created."
-    else
-      render 'product_create_form'
+        redirect_to "/products", notice: "Product was successfully created."
+      else
+        redirect_to '/products/new'
     end
   end
 
@@ -33,9 +33,9 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to '/', notice: "Product was successfully updated."
+      redirect_to '/products', notice: "Product was successfully updated."
     else
-      render 'product_create_form'
+      render 'product_edit_form'
     end
   end
 

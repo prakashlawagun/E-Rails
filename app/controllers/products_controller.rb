@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
     if @product.save
         redirect_to "/products", notice: "Product was successfully created."
       else
-        redirect_to '/products/new', alert: "Failed to create product."
+        redirect_to '/products/register'
     end
   end
 

@@ -1,3 +1,13 @@
+<% if user_signed_in? %>
+  <div class="text-center text-success fs-4">
+    <span id="noticeSpan"><%= notice %></span>
+  </div>
+<% else %>
+  <div class="text-center text-danger fs-4">
+    <span id="noticeSpan"><%= alert %></span>
+  </div>
+<% end %>
+
 <div class="container">
   <h2 class="text-center mt-4">Products Lists</h2>
   <div class="row products">
@@ -5,7 +15,7 @@
       <div class="col-md-4">
         <div class="card mb-3">
           <% if p.image.attached? %>
-            <%= image_tag url_for(p.image), class:"card-img-top", style: "max-width: 500px; max-height: 500px;" %>
+            <%= image_tag url_for(p.image), class: "card-img-top", style: "max-width: 500px; max-height: 500px;" %>
           <% else %>
             <p>No image available</p>
           <% end %>
@@ -14,10 +24,31 @@
             <p class="card-text"><%= p.description %></p>
             <p class="card-text">$<%= p.price %></p>
             <a href="#" class="btn btn-success">Buy</a>
-            <%= link_to 'View', product_url(id: p.id), class: "btn btn-primary float-end" %>
+            <% if user_signed_in? %>
+              <%= link_to 'View', product_url(id: p.id), class: "btn btn-primary float-end" %>
+            <% end %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const noticeSpan = document.getElementById("noticeSpan");
+        const loggedIn = <%= user_signed_in? %>;
+
+        if (loggedIn) {
+          timer();
+        }else{
+          timer();
+        }
+
+        function timer(){
+            noticeSpan.style.display = "inline";
+            setTimeout(function () {
+                noticeSpan.style.display = "none";
+            }, 3000);
+        }
+    });
+</script>

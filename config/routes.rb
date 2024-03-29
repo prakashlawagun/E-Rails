@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get '/product_view/:id', to: 'products#show'
   put '/product_edit/:id', to: 'products#edit'
   resources :products
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :registrations
 end

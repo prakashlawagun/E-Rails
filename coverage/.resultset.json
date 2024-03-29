@@ -533,9 +533,9 @@
           null,
           1,
           1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
           null,
           null
         ]
@@ -569,6 +569,72 @@
           null
         ]
       },
+      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/controllers/products_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/models/product.rb": {
         "lines": [
           1,
@@ -585,74 +651,8 @@
           1,
           null
         ]
-      },
-      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/controllers/products_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          4,
-          4,
-          null,
-          null,
-          1,
-          2,
-          2,
-          null,
-          null,
-          1,
-          3,
-          3,
-          null,
-          null,
-          1,
-          2,
-          null,
-          2,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          5,
-          null,
-          null,
-          1,
-          3,
-          null,
-          null
-        ]
-      },
-      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1711604070
+    "timestamp": 1711608102
   }
 }

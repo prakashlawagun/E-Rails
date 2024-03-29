@@ -6,14 +6,13 @@ class RegistrationsController < ApplicationController
   def create
     @user = User.new(registration_params)
     if @user.save
-      login @user
-      redirect_to products_path
+      redirect_to '/sessions/new'
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   def registration_params
-    params.require(:user).permit(:name, :email, :password)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end

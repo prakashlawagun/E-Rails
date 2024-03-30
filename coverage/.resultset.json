@@ -533,9 +533,22 @@
           null,
           1,
           1,
-          2,
-          2,
-          2,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/spec/factories/user.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -550,6 +563,8 @@
           null,
           null,
           null,
+          1,
+          1,
           1,
           1,
           1,
@@ -569,62 +584,39 @@
           null
         ]
       },
-      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/controllers/products_controller.rb": {
+      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/helpers/user_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/helpers/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/controllers/registrations_controller.rb": {
         "lines": [
           1,
           1,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
+          2,
           null,
           null,
           1,
           1,
           1,
+          0,
+          0,
+          null,
+          1,
+          null,
           null,
           null,
           1,
           null,
           1,
           1,
-          null,
-          null,
-          1,
-          0,
           null,
           null
         ]
@@ -632,6 +624,152 @@
       "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          9,
+          null,
+          1,
+          null,
+          1,
+          9,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          4,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          0,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/controllers/sessions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/models/concerns/current.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/controllers/products_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
           null
         ]
       },
@@ -644,15 +782,8 @@
           1,
           null
         ]
-      },
-      "/home/linux/RubymineProjects/RestAPIDemo/ecommerce/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1711608102
+    "timestamp": 1711804344
   }
 }

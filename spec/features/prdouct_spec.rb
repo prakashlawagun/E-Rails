@@ -17,7 +17,7 @@ RSpec.feature "Products", type: :feature do
     expect(page).to have_content("Good")
   end
 
-  context 'User create register product' do
+  context 'User create product' do
     scenario "should be successful" do
       visit new_product_path
       within('.needs-validation') do

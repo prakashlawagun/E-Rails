@@ -1,14 +1,18 @@
-<% if user_signed_in? %>
-  <div class="text-center text-success fs-4">
-    <span id="noticeSpan"><%= notice %></span>
-  </div>
-<% else %>
-  <div class="text-center text-danger fs-4">
-    <span id="noticeSpan"><%= alert %></span>
-  </div>
-<% end %>
-
 <div class="container">
+  <% if user_signed_in? %>
+    <% if flash[:notice] %>
+      <div class="alert alert-success text-center fs-4 noticeSpan mt-4" role="alert">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+  <% else %>
+    <% if flash[:alert] %>
+      <div class="alert alert-danger text-center fs-3 noticeSpan mt-4" role="alert">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+  <% end %>
+
   <h2 class="text-center mt-4">Products Lists</h2>
   <div class="row products">
     <% @product.each do |p| %>
@@ -35,20 +39,23 @@
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const noticeSpan = document.getElementById("noticeSpan");
+        const noticeSpans = document.getElementsByClassName("noticeSpan");
         const loggedIn = <%= user_signed_in? %>;
 
         if (loggedIn) {
-          timer();
-        }else{
-          timer();
+            timer();
+        } else {
+            timer();
         }
 
-        function timer(){
-            noticeSpan.style.display = "inline";
-            setTimeout(function () {
-                noticeSpan.style.display = "none";
-            }, 3000);
+        function timer() {
+            Array.from(noticeSpans).forEach(function(noticeSpan) {
+                noticeSpan.style.display = "flex";
+                setTimeout(function () {
+                    noticeSpan.style.display = "none";
+                }, 3000);
+            });
         }
     });
 </script>
+

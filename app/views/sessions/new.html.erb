@@ -1,18 +1,13 @@
-<%= form_with model: @user, url: sessions_url, html: { class: "needs-validation", novalidate: true } do |f| %>
+<%= form_with model: @user, url: sessions_path, html: { class: "needs-validation", novalidate: true } do |f| %>
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="mb-3">
           <h2>User Login</h2>
         </div>
-        <% if flash[:alert] %>
-          <div class="alert alert-danger" role="alert">
-            <%= flash[:alert] %>
-          </div>
-        <% end %>
         <div class="mb-3">
           <%= f.label :email, class: "form-label" %>
-          <%= f.email_field :email, class: "form-control", required: true, autofocus: true %>
+          <%= f.email_field :email, class: "form-control", required: true %>
           <div class="invalid-feedback">
             Please provide a valid email address.
           </div>

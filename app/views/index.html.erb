@@ -27,7 +27,11 @@
             <h5 class="card-title"><%= p.name %></h5>
             <p class="card-text"><%= p.description %></p>
             <p class="card-text">$<%= p.price %></p>
-            <a href="#" class="btn btn-success">Buy</a>
+            <% if  user_signed_in? %>
+             <%= link_to 'Buy', class: "btn btn-success" %>
+            <% else %>
+              <%= link_to 'Buy',new_session_path,class: "btn btn-success" %>
+            <% end %>
             <% if user_signed_in? %>
               <%= link_to 'View', product_url(id: p.id), class: "btn btn-primary float-end" %>
             <% end %>

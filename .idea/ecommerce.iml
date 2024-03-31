@@ -48,6 +48,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.18.3, ruby-3.0.2-p107) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, ruby-3.0.2-p107) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v2.5.6, ruby-3.0.2-p107) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cancan (v1.6.10, ruby-3.0.2-p107) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara (v3.40.0, ruby-3.0.2-p107) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.2.3, ruby-3.0.2-p107) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="connection_pool (v2.4.1, ruby-3.0.2-p107) [gem]" level="application" />
@@ -149,6 +150,7 @@
         <option value="active_record:multi_db" />
         <option value="application_record" />
         <option value="benchmark" />
+        <option value="cancan:ability" />
         <option value="channel" />
         <option value="controller" />
         <option value="devise" />
@@ -203,6 +205,7 @@
         <option value="active_record:multi_db" />
         <option value="application_record" />
         <option value="benchmark" />
+        <option value="cancan:ability" />
         <option value="channel" />
         <option value="controller" />
         <option value="devise" />

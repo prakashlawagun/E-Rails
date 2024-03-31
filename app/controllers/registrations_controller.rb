@@ -9,6 +9,7 @@ class RegistrationsController < ApplicationController
       login @user
       redirect_to root_path, notice: "Welcome to home"
     else
+      flash.now[:alert] = "User creation failed"
       render :new, status: :unprocessable_entity
     end
   end

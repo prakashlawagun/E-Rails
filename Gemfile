@@ -66,6 +66,8 @@ group :test do
   gem 'rspec-rails'
   gem 'simplecov', require: false
   gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  gem "cancan"
 end
 
 gem "devise", "~> 4.9"

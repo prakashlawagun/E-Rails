@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_secure_password
   before_validation :check_uniqueness_errors
 
+  enum role: {normal:0, admin:1}
+
   private
   def check_uniqueness_errors
     if self.errors[:name].any?
@@ -14,5 +16,9 @@ class User < ApplicationRecord
     if self.errors[:email].any?
       self.errors.add(:email, "has already been taken")
     end
+  end
+
+  def admin
+    role == 'admin'
   end
 end

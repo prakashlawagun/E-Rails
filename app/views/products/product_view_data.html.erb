@@ -4,7 +4,7 @@
     <div class="col-md-8 mx-auto">
       <div class="card shadow mb-4">
         <% if @product.image.attached? %>
-          <%= image_tag url_for(@product.image), class:"card-img-top",style: "max-width: 900px; max-height: 500px;" %>
+          <%= image_tag url_for(@product.image), class: "card-img-top", style: "max-width: 900px; max-height: 500px;" %>
         <% else %>
           <p>No image available</p>
         <% end %>
@@ -13,14 +13,25 @@
           <p class="card-text mb-4"><%= @product.description %></p>
           <p class="card-text h4">$<%= @product.price %></p>
           <div class="row justify-content-center mt-4">
-            <% if current_user.admin? %>
-            <div class="col-auto">
-              <%= link_to "Edit", edit_product_url(id: @product.id), class: "btn btn-primary mr-2" %>
-            </div>
-            <div class="col-auto">
-              <%= button_to "Delete", @product, method: :delete, class: "btn btn-danger" %>
-            </div>
+            <% if user_signed_in? %>
+              <% if current_user.admin? %>
+                <div class="col-auto">
+                  <%= link_to "Edit", edit_product_url(id: @product.id), class: "btn btn-primary mr-2" %>
+                </div>
+                <div class="col-auto">
+                  <%= button_to "Delete", @product, method: :delete, class: "btn btn-danger" %>
+                </div>
               <% end %>
+            <% end %>
+            <% if user_signed_in? %>
+              <div class="col-auto">
+                <%= button_to "Add to Cart",line_items_path(:product => @product.id) %>
+              </div>
+            <% else %>
+              <div class="col-auto">
+                <%= link_to "AddToCart",new_session_path, class: "btn btn-success" %>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     user = User.authenticate_by(email: params[:email], password: params[:password])
     if user
       login user
+      Rails.logger.info("User Login Successfully.")
       redirect_to root_path, notice: "You have signed successfully."
     else
       flash[:alert] = "Invalid email or password."

@@ -4,8 +4,8 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }
   normalizes :email, with: ->(email){ email.strip.downcase }
   has_secure_password
+  has_one :cart
   before_validation :check_uniqueness_errors
-
   enum role: {normal:0, admin:1}
 
   private

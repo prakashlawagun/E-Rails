@@ -12,7 +12,6 @@
       </div>
     <% end %>
   <% end %>
-
   <h2 class="text-center mt-4">Products Lists</h2>
   <div class="row products">
     <% @product.each do |p| %>
@@ -27,10 +26,12 @@
             <h5 class="card-title"><%= p.name %></h5>
             <p class="card-text"><%= p.description %></p>
             <p class="card-text">$<%= p.price %></p>
-            <a href="#" class="btn btn-success">Buy</a>
-            <% if user_signed_in? %>
-              <%= link_to 'View', product_url(id: p.id), class: "btn btn-primary float-end" %>
+            <% if  user_signed_in? %>
+             <%= link_to 'Buy', class: "btn btn-success" %>
+            <% else %>
+              <%= link_to 'Buy',new_session_path,class: "btn btn-success" %>
             <% end %>
+              <%= link_to 'View', product_url(id: p.id), class: "btn btn-primary float-end" %>
           </div>
         </div>
       </div>
@@ -41,7 +42,6 @@
     document.addEventListener("DOMContentLoaded", function () {
         const noticeSpans = document.getElementsByClassName("noticeSpan");
         const loggedIn = <%= user_signed_in? %>;
-
         if (loggedIn) {
             timer();
         } else {
@@ -53,6 +53,7 @@
                 noticeSpan.style.display = "flex";
                 setTimeout(function () {
                     noticeSpan.style.display = "none";
+                    window.location.reload();
                 }, 3000);
             });
         }

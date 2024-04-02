@@ -1,14 +1,16 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:edit, :update, :destroy]
   before_action :require_admin, only:[:create, :update,:destroy, :edit, :new]
 
   def index
     @product = Product.all
+    @cart = current_user&.cart || Cart.new
     render "/index"
   end
 
   def show
     @product = Product.find(params[:id])
+    @cart = current_user&.cart || Cart.new
     render 'product_view_data'
   end
 
@@ -22,8 +24,8 @@ class ProductsController < ApplicationController
 
     if @product.save
         redirect_to "/products", notice: "Product was successfully created."
-      else
-        redirect_to '/products/register'
+    else
+      redirect_to '/products/register'
     end
   end
 
